@@ -42,11 +42,11 @@ const taxPercent = 10;
 // Use string template literal:
   //- Alert a message saying `The total amount is [amount]
 
-  alert(`The total amoutn is ${amount}`)
+  alert(`The total amoutn is ${amount} \n the tax amount is ${amount * taxPercent / 100}`)
 
     //the tax amount is [(amount * taxPercent) / 100]
 
-    alert(`the tax amount is ${amount * taxPercent / 100}`)
+    // alert(`the tax amount is ${amount * taxPercent / 100}`)
   
   //- Above message should be in two lines
 
