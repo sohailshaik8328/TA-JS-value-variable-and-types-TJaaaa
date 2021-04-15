@@ -1,0 +1,1 @@
+alert("I am learning Java Script in script.js file")
