@@ -24,8 +24,7 @@ if(num1 > num2){
 }
 // 3. Convert the above code using`?` terniary operator
 
-let num1 = Number(prompt("Enter first number"))
-let num2 = Number(prompt("Enter second number"))
+
 
 num1 >= num2 ? alert(`${num1} is greater`) : alert(`${num2} is greater`)
 
@@ -133,13 +132,13 @@ if(salary <= 20000){
 
 switch(true){
   case salary <= 20000 :
-    let tax = (salary * 10) / 100
+    var tax = (salary * 10) / 100
     alert(`your in hand salary is + ${salary - tax}` )
   case salary <= 40000 :
-    let tax = (salary * 20) / 100
+    var tax = (salary * 20) / 100
     alert(`your in hand salary is + ${salary - tax}` )
   case salary <= 50000 :
-    let tax = (salary * 30) / 100
+    var tax = (salary * 30) / 100
     alert(`your in hand salary is + ${salary - tax}` )
 }
 
