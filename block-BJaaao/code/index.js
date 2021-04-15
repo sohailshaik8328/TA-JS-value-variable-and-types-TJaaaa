@@ -38,20 +38,21 @@ alert(`The sum of ${num1} and ${num2} is ${num1 + num2}`)
     Profession: [userProfession]` (it should be in three different lines)
 */
 
-let userName = "Sohail Shaik"
-prompt(userName)
-let userProfession = "Software developer"
-prompt(userProfession)
+let userName = prompt("What is your name?")
+let userProfession = prompt("What is your profession?")
 
-let isAdult = "Yes"
-conform(isAdult)
+let isAdult = confirm("Are you an adult?")
 
-alert(`?I am ${userName} a ${userProfession}`)
+alert(`I am ${userName} a ${userProfession}`)
 console.log(`I am ${userName} a ${userProfession}`);
 
-alert(`Username: ${userName} \n Adult ${isAdult} \n Profession: ${userProfession}`)
+alert(`Username: ${userName}
+Adult ${isAdult} 
+Profession: ${userProfession}`)
 
-console.log(`Username: ${userName} \n Adult: ${isAdult} \n Profession ${userProfession}`);
+console.log(`Username: ${userName} 
+Adult: ${isAdult} 
+Profession ${userProfession}`);
 
 
 
@@ -66,8 +67,8 @@ console.log(`Username: ${userName} \n Adult: ${isAdult} \n Profession ${userProf
   - Log using console.log [numA * numB]
 */
 
-let numA = 12
-let numB = 13
+let numA = Number(prompt("Enter first Number"))
+let numB = Number(prompt("Enter Second Number"))
 
 alert(`The sum of both numbers is ${numA + numB}`)
 alert(`The Subtraction of both numbers is ${numA - numB}`)
