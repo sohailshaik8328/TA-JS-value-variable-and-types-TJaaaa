@@ -57,7 +57,7 @@ const taxPercent = 10;
 
    // the tax amount is [(amount * taxPercent) / 100]
 
-   alert("the tax amount is \n " + (amount * taxPercent) / 100 )
+   alert("the tax amount is " + "\n the tax amount is " + (amount * taxPercent) / 100 )
   
   //- Above message should be in two lines
 
