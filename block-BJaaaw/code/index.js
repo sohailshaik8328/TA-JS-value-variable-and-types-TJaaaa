@@ -17,14 +17,17 @@ if(num % 2 === 0){
 let num1 = Number(prompt("Enter first number"))
 let num2 = Number(prompt("Enter second number"))
 
-alert(num1 >= num2 || num2 >= num1)
-
+if(num1 > num2){
+  alert(`${num1} is greater`)
+}else {
+  alert(`${num2} is greater`)
+}
 // 3. Convert the above code using`?` terniary operator
 
 let num1 = Number(prompt("Enter first number"))
 let num2 = Number(prompt("Enter second number"))
 
-num1 >= num2 || num2 >= num1 ? alert(num1 >= num2) : alert(num2 >= num1)
+num1 >= num2 ? alert(`${num1} is greater`) : alert(`${num2} is greater`)
 
 
 /*
@@ -37,9 +40,9 @@ num1 >= num2 || num2 >= num1 ? alert(num1 >= num2) : alert(num2 >= num1)
 
 let houseName = prompt("Enter house name")
 
-if(houseName == "stark"){
+if(houseName === "stark"){
   alert(" Winter is coming")
-}else if (houseName == "lannister"){
+}else if (houseName === "lannister"){
   alert("A lannister always pays his debt")
 }else{
   alert("All men must die")
@@ -71,30 +74,42 @@ switch(houseName){
 let month = Number(prompt("Enter month"))
 
 switch(month){
-    case 1 :
+    case "January" :
     alert("January month has 31 days")
-    case 2 :
+    break;
+    case "February" :
     alert("February month has 30 days")
-    case 3 :
+    break;
+    case "March" :
     alert("March month has 31 days")
-    case 4 :
+    break;
+    case "April" :
     alert("April month has 30 days")
-    case 5 :
+    break;
+    case "May" :
     alert("May month has 31 days")
-    case 6 :
+    break;
+    case "June" :
     alert("June month has 30 days")
-    case 7 :
+    break;
+    case "July" :
     alert("July month has 31 days")
-    case 8 :
+    break;
+    case "August" :
     alert("August month has 30 days")
-    case 9 :
+    break;
+    case "September" :
     alert("September month has 31 days")
-    case 10 :
+    break;
+    case "October" :
     alert("October month has 30 days")
-    case 11 :
+    break;
+    case "November" :
     alert("November month has 31 days")
-    case 12 :
+    break;
+    case "December" :
     alert("December month has 30 days")
+    break;
 }
 
 /* 7.
@@ -116,13 +131,16 @@ if(salary <= 20000){
 }
 //  if..else vs switch
 
-switch(salary){
+switch(true){
   case salary <= 20000 :
-    alert("your in hand salary is" + salary - 10/100 )
+    let tax = (salary * 10) / 100
+    alert(`your in hand salary is + ${salary - tax}` )
   case salary <= 40000 :
-    alert("your in hand salary is" + salary - 20/100 )
+    let tax = (salary * 20) / 100
+    alert(`your in hand salary is + ${salary - tax}` )
   case salary <= 50000 :
-    alert("your in hand salary is" + salary - 30/100 )
+    let tax = (salary * 30) / 100
+    alert(`your in hand salary is + ${salary - tax}` )
 }
 
 /* 8.
@@ -153,14 +171,19 @@ if(marks > 100){
 switch(marks){
   case marks > 100 :
     alert("Marks can't be greater than 100")
+    break;
   case marks > 80 && marks < 100 :
     alert("Grade A")
+    break;
   case marks > 50 && marks < 80 :
     alert("Grade B")
+    break;
   case marks > 30 && marks < 50 :
     alert("grade C")
+    break;
   case marks > 0 :
     alert("Grade D")
+    break;
 }
 
 
