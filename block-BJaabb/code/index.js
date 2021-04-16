@@ -14,8 +14,8 @@ console.log(userName)
 let age = 22, isLearning = true
 
 user = "John"
-console.log(user)
-console.log(userName)
+console.log("User" +  user)
+console.log("Username" +  userName)
 /* 2.
 Use `prompt` to take two numbers from user and store it in variable `numA` and `numB`. Create a third variable called `sum`,
  using `+` operator add numA and numB , store it in varible `sum` and using alert display `sum` in browser.
@@ -31,15 +31,13 @@ alert("Sum of two numbers is" + sum)
 
 // 3. Complete the following code to make the output be 0 2 4 6 8 10?
 
-for (let j = 0; j <= 10; j = j + 1){
-    if(j % 2 === 0){
-         console.log(j);
-    }
+for (let j = 0; j <= 10; j = j + 2){  
+   console.log(j);
 }
 
 // 4. Print the odd numbers from 9 to 1 (both inclusive) using a for loop.
 
-for(let j = 9 ; j >= 0 ; j = j - 1){
+for(let j = 9 ; j >= 1 ; j = j - 1){
     if(j % 2 !== 0){
         console.log(j)
     }
@@ -54,20 +52,39 @@ for(let j = 9 ; j >= 0 ; j = j - 1){
 //     newString += num;
 // }
 // console.log(newString)
+
+let emptyString = "";
+let initialValue = 5;
+while(initialValue >= 0){
+    emptyString += initialValue;
+    initialValue--;
+} 
+console.log(emptyString);
+
 // 6. Concat all the even numbers from 10 to 0 (both inclusive) in descending order using a while loop. (1086420)
 
-let num = 10;
+// let num = 10;
 
-let newString = ""
+// let newString = ""
 
-while(num > 0){
-   if(num % 2 === 0){
-    num -= 1
-   }
-    newString += num
+// while(num > 0){
+//    if(num % 2 === 0){
+//     num -= 1
+//    }
+//     newString += num
+// }
+
+// console.log(newString)
+
+let emptyEvenString = ""
+let evenInitialValue = 10;
+while(evenInitialValue >= 0){
+    if(evenInitialValue % 2 === 0){
+        emptyEvenString += evenInitialValue
+    }
+    evenInitialValue--;
 }
-
-console.log(newString)
+console.log(emptyEvenString);
 
 
 // Comparisoin
@@ -85,13 +102,17 @@ Example:
 
 */
 
-let num1 = Number(prompt("Enter first number"))
-let num2 = Number(prompt("enter second number"))
+let num1 = Number(prompt("Enter number one"))
+let num2 = Number(prompt("enter number two"))
 
-if(num1 === num2){
-    alert(true)
-}else if(num1 || num2 === true || null || undefined ){
-    alert("enter a valid value")
+// if(num1 === num2){
+//     alert(true)
+// }else if(num1 || num2 === true || null || undefined ){
+//     alert("enter a valid value")
+// }
+
+if(isNaN(num1) || isNaN(num2)){
+    alert("Enter Valid Value")
 }else{
-    alert( false)
+    alert(num1 === num2)
 }
