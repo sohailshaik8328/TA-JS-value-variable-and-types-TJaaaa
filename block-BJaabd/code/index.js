@@ -1,7 +1,7 @@
 // Condition
 // Write your code below each problems:
 
-/*
+/*>
 Write a program that asks the user his/her age and check for the following conditions :
 
 - `if` the age is between 12-55 then print the message "You can participate in the marathon".
@@ -11,11 +11,11 @@ Write a program that asks the user his/her age and check for the following condi
 👇
 */
 
-let age = prompt("Enter your age")
+let age = +prompt("Enter your age")
 
-if(age >= 12 || age <= 55){
+if(age >= 12 && age <= 55){
   alert("You can participate in the marathon")
-}else if(age >= 4 || age <= 11){
+}else if(age >= 4 && age <= 11){
   alert("You are too young to participate in the marathon")
 }else if(age < 4){
   alert("Hey Kiddo! Can You Walk ?")
@@ -33,12 +33,18 @@ n = 7 => output: heeeeeeello
 👇
 */
 // [Your code goes here]
-let n = +prompt("Enter number")
-let word = "hello"
-for(let i = n ; i < word ; i++ ){
-  word++
+
+
+let input = +prompt("Enter number to increase 'e'")
+let start = "h";
+let end = "llo"
+let middle = "";
+
+for(let i = 0 ; i < input ; i++){
+  middle += "e";
 }
-console.log(word)
+alert(start + middle + end);
+
 
 /*
 Program to calculate the sum of first n natural numbers(1,2,3...n are known as natural numbers). Prompt user to enter 
@@ -49,10 +55,10 @@ n (using `prompt`) then based on input provided calculate and show result in `al
 
 let naturalNumber = +prompt("Enter any natural number")
 let sum = 0;
-for(let i = 0 ; i < naturalNumber ; i++){
-  sum += i
+for(let i = 1 ; i <= naturalNumber ; i++){
+  sum += i;
 }
-console.log(sum)
+alert(`The value of natural numbers sum is ${sum}`)
 
 /* Switch Statement
 
@@ -73,7 +79,7 @@ Take a number value from user and alert the message if it matches the conditions
 */
 // [Your code goes here]
 
-let number = +prompt("Enter the number ")
+let number = +prompt("Enter the number between 1-10 ")
 
 switch(number){
   case 1 :
@@ -124,10 +130,10 @@ Take the value of `marks` (0-100) from user using `prompt` and `alert` the messa
 
 // [Your code goes here]
 
-let marks = prompt("Enter marks")
+let marks = prompt("Enter marks from (1-100)")
 
-switch(marks){
-  case  marks >= 90:
+switch(true){
+  case  marks > 90:
     alert("Your Grade is 'AA' ")
     break;
     case  marks > 80 || marks <= 90:
@@ -162,7 +168,7 @@ switch(marks){
 let integer1 = +prompt("Enter number one")
 let integer2 = +prompt("Enter number two")
 
-if(integer1 >= integer2){
+if(integer1 > integer2){
   alert(integer1)
 }else{
   alert(integer2)
@@ -178,6 +184,15 @@ Take those three numbers from user using `prompt`. Display an alert box with the
 let signNum1 = +prompt("Enter signNum one")
 let signNum2 = +prompt("Enter signNum two")
 let signNum3 = +prompt("Enter signNum three")
+
+let product = signNum1 * signNum2 * signNum3;
+
+if(product > 0 ){
+  alert("The first value is Positive")
+}else{
+  alert("The last value is Negative")
+}
+
 
 
 
@@ -201,20 +216,33 @@ let signNum3 = +prompt("Enter signNum three")
 let calNum1 = +prompt("Enter calNum1")
 let calNum2 = +prompt("Enter calNum2")
 
-let addition = calNum1 + calNum2 
-let subtraction = calNum1 - calNum2 
-let multiplication = calNum1 * calNum2 
-let divide = calNum1 / calNum2 
+let operation = +prompt
+("enter an operation from (Add, Subtract, Multiply, Divide)")
 
-if(addition){
-  alert("Addition")
-}else if (subtraction){
-  alert("subtraction")
-}else if (multiplication){
-  alert("Multiplication")
-}else if(calNum1 <= calNum2){
-  alert("Number Two is larger then Number one")
+switch(operation){
+  case "Add" :
+    alert(`The sum of ${calNum1} + ${calNum2} is ${calNum1 + calNum2} `)
+    break;
+    case "Subtract" :
+    alert(`The difference of ${calNum1} - ${calNum2} is ${calNum1 - calNum2} `)
+    break;
+    case "Multiply" :
+    alert(`The produce of ${calNum1} * ${calNum2} is ${calNum1 * calNum2} `)
+    break;
+    case "Divide" :
+    alert(`The division of ${calNum1} / ${calNum2} is ${calNum1 / calNum2} `)
+    break;
 }
-else{
-  alert("Divide")
-}
+
+// if(addition){
+//   alert("Addition")
+// }else if (subtraction){
+//   alert("subtraction")
+// }else if (multiplication){
+//   alert("Multiplication")
+// }else if(calNum1 <= calNum2){
+//   alert("Number Two is larger then Number one")
+// }
+// else{
+//   alert("Divide")
+// }
