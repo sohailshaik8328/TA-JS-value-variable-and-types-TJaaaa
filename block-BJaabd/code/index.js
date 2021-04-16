@@ -188,7 +188,7 @@ let signNum3 = +prompt("Enter signNum three")
 let product = signNum1 * signNum2 * signNum3;
 
 if(product > 0 ){
-  alert("The first value is Positive")
+  alert("The last value is Positive")
 }else{
   alert("The last value is Negative")
 }
@@ -221,17 +221,19 @@ let operation = +prompt
 
 switch(operation){
   case "Add" :
-    alert(`The sum of ${calNum1} + ${calNum2} is ${calNum1 + calNum2} `)
+    alert(`The sum of ${calNum1} and ${calNum2} is ${calNum1 + calNum2} `)
     break;
     case "Subtract" :
-    alert(`The difference of ${calNum1} - ${calNum2} is ${calNum1 - calNum2} `)
+    alert(`The difference of ${calNum1} and ${calNum2} is ${calNum1 - calNum2} `)
     break;
     case "Multiply" :
-    alert(`The produce of ${calNum1} * ${calNum2} is ${calNum1 * calNum2} `)
+    alert(`The produce of ${calNum1} and ${calNum2} is ${calNum1 * calNum2} `)
     break;
     case "Divide" :
-    alert(`The division of ${calNum1} / ${calNum2} is ${calNum1 / calNum2} `)
+    alert(`The division of ${calNum1} and ${calNum2} is ${calNum1 / calNum2} `)
     break;
+    default:
+      alert("Enter avalid input")
 }
 
 // if(addition){
