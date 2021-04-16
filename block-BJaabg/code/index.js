@@ -15,4 +15,8 @@ var bank_balance = 303.91;
 var amount = 0;
 // your code goes here
 
+for(let i = (PHONE_PRICE + ACCESSORY_PRICE) * TAX_RATE ; i < bank_balance ; i++){
+    console.log(i)
+}
+
 // ⛑ Answer of the above will `$334.76`.
